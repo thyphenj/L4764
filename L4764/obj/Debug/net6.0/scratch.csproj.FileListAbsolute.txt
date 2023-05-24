@@ -1,0 +1,15 @@
+/Users/t-j/Projects/scratch/scratch/bin/Debug/net6.0/scratch
+/Users/t-j/Projects/scratch/scratch/bin/Debug/net6.0/scratch.deps.json
+/Users/t-j/Projects/scratch/scratch/bin/Debug/net6.0/scratch.runtimeconfig.json
+/Users/t-j/Projects/scratch/scratch/bin/Debug/net6.0/scratch.dll
+/Users/t-j/Projects/scratch/scratch/bin/Debug/net6.0/scratch.pdb
+/Users/t-j/Projects/scratch/scratch/obj/Debug/net6.0/scratch.csproj.AssemblyReference.cache
+/Users/t-j/Projects/scratch/scratch/obj/Debug/net6.0/scratch.GeneratedMSBuildEditorConfig.editorconfig
+/Users/t-j/Projects/scratch/scratch/obj/Debug/net6.0/scratch.AssemblyInfoInputs.cache
+/Users/t-j/Projects/scratch/scratch/obj/Debug/net6.0/scratch.AssemblyInfo.cs
+/Users/t-j/Projects/scratch/scratch/obj/Debug/net6.0/scratch.csproj.CoreCompileInputs.cache
+/Users/t-j/Projects/scratch/scratch/obj/Debug/net6.0/scratch.dll
+/Users/t-j/Projects/scratch/scratch/obj/Debug/net6.0/refint/scratch.dll
+/Users/t-j/Projects/scratch/scratch/obj/Debug/net6.0/scratch.pdb
+/Users/t-j/Projects/scratch/scratch/obj/Debug/net6.0/scratch.genruntimeconfig.cache
+/Users/t-j/Projects/scratch/scratch/obj/Debug/net6.0/ref/scratch.dll

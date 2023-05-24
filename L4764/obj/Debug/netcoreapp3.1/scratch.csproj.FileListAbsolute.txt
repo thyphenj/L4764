@@ -1,0 +1,14 @@
+/Users/t-j/Projects/scratch/scratch/bin/Debug/netcoreapp3.1/scratch
+/Users/t-j/Projects/scratch/scratch/bin/Debug/netcoreapp3.1/scratch.deps.json
+/Users/t-j/Projects/scratch/scratch/bin/Debug/netcoreapp3.1/scratch.runtimeconfig.json
+/Users/t-j/Projects/scratch/scratch/bin/Debug/netcoreapp3.1/scratch.runtimeconfig.dev.json
+/Users/t-j/Projects/scratch/scratch/bin/Debug/netcoreapp3.1/scratch.dll
+/Users/t-j/Projects/scratch/scratch/bin/Debug/netcoreapp3.1/scratch.pdb
+/Users/t-j/Projects/scratch/scratch/obj/Debug/netcoreapp3.1/scratch.csproj.AssemblyReference.cache
+/Users/t-j/Projects/scratch/scratch/obj/Debug/netcoreapp3.1/scratch.GeneratedMSBuildEditorConfig.editorconfig
+/Users/t-j/Projects/scratch/scratch/obj/Debug/netcoreapp3.1/scratch.AssemblyInfoInputs.cache
+/Users/t-j/Projects/scratch/scratch/obj/Debug/netcoreapp3.1/scratch.AssemblyInfo.cs
+/Users/t-j/Projects/scratch/scratch/obj/Debug/netcoreapp3.1/scratch.csproj.CoreCompileInputs.cache
+/Users/t-j/Projects/scratch/scratch/obj/Debug/netcoreapp3.1/scratch.dll
+/Users/t-j/Projects/scratch/scratch/obj/Debug/netcoreapp3.1/scratch.pdb
+/Users/t-j/Projects/scratch/scratch/obj/Debug/netcoreapp3.1/scratch.genruntimeconfig.cache
