@@ -9,49 +9,9 @@ namespace L4764
     {
         static void Main()
         {
-            List<(int, int, int)> products = new List<(int, int, int)>();
+            var products = GetProducts();
 
-            for (int B = 1; B < 10; B++)
-            {
-                for (int C = 1; C < 10; C++)
-                {
-                    if (B != C)
-                    {
-                        for (int E = 1; E < 10; E++)
-                        {
-                            if (B != E && C != E)
-                            {
-                                for (int F = 1; F < 10; F++)
-                                {
-                                    if (B != F && C != F && E != F)
-                                    {
-                                        int G = B * E + 66 * C * F;
-                                        int H = (C * E + B * F);
-
-                                        if (StringIsNotValid((long)G)) continue;
-
-                                        products.Add((B * 1000 + C * 100 + E * 10 + F, G, H));
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            {
-                int i = 1;
-                int j = 1;
-                int prev = 0;
-                foreach (var x in products.OrderBy(x => x.Item1))
-                {
-                    if (x.Item2 == prev)
-                        System.Console.WriteLine($"{i++,4}  {x.Item1}  -  {x.Item2} ***** {j++,3}");
-                    else
-                        System.Console.WriteLine($"{i++,4}  {x.Item1}  -  {x.Item2}");
-                    prev = x.Item2;
-                }
-            }
+            var results = new Results();
 
             foreach (int DD in new int[] { 1, 4, 9 })
             {
@@ -86,33 +46,77 @@ namespace L4764
                                                 long sitaround = (SS + II + (long)Math.Pow(TT, AA) + RR * OO - UU - NN) * DD;
                                                 long unitards = UU * ((long)Math.Pow((NN + II), TT) - (AA + RR) * DD) * SS;
                                                 long astroid = (AA + SS) * TT * ((long)Math.Pow(RR, OO) - (long)Math.Sqrt(DD * II));
+                                                long sutorian = SS * (long)Math.Pow(UU, TT) + (OO + RR + II) * AA + NN;
                                                 long dinostar = (DD * II - NN * OO) * (SS + TT) * AA + RR;
+                                                //long trinodus = ((TT / RR) * Math.Pow(II, NN) * (OO * DD * UU + SS)); this doesn't work ! T/R = 3/2
+                                                long tinodusRearr = (long)(TT * (long)Math.Pow(II, NN) * (OO * DD * UU + SS) / RR);
+                                                long tundras = (TT * (long)Math.Pow(UU, NN) * (DD + RR) + AA) * SS;
+                                                long intrados = -(long)Math.Sqrt(II) * NN + TT * RR * AA * DD * OO + SS;
 
                                                 // Down
                                                 long durations2 = (-DD + UU * (RR + AA) * ((long)Math.Pow(TT, II) + OO * (long)Math.Pow(NN, SS)));
+                                                long dinosaur = DD * II * ((long)Math.Pow(NN, OO) * SS + AA + UU) * RR;
                                                 long around = ((AA * RR * OO * UU + NN) * DD);
+                                                long auditors = AA * (UU + DD) + (II + TT + OO) * (long)Math.Pow(RR, SS);
+                                                long sautoir = SS - AA + (long)Math.Pow(UU, TT) * (OO + II - RR);
+                                                long sudation = (SS * (UU + DD - AA) - TT) * II * OO + NN;
+                                                long rainouts = RR - (AA + II + NN + OO - (long)Math.Pow(UU, TT)) * SS;
+                                                long nutrisoda = ((long)Math.Pow((NN + UU), TT) + RR * II + SS + OO + DD) * AA;
+                                                long rodaustin = RR * (OO * ((long)Math.Sqrt(DD) - AA + UU * SS * TT) - II + NN);
+                                                long astound = AA * ((long)Math.Pow(SS, TT) + OO * UU + NN) + DD;
 
-                                                if (StringIsNotValid(durations1)) continue;
-                                                if (StringIsNotValid(rotunda)) continue;
-                                                if (StringIsNotValid(sitaround)) continue;
-                                                if (StringIsNotValid(unitards)) continue;
-                                                if (StringIsNotValid(astroid)) continue;
-                                                if (StringIsNotValid(dinostar)) continue;
+                                                if (results.AddAnswer(new Result("durations1", durations1))) continue;
+                                                if (IsInvalidNumber(rotunda)) continue;
+                                                if (IsInvalidNumber(sitaround)) continue;
+                                                if (IsInvalidNumber(unitards)) continue;
+                                                if (IsInvalidNumber(astroid)) continue;
+                                                if (IsInvalidNumber(sutorian)) continue;
+                                                if (IsInvalidNumber(dinostar)) continue;
+                                                if (IsInvalidNumber(tinodusRearr)) continue;
+                                                if (IsInvalidNumber(tundras)) continue;
+                                                if (IsInvalidNumber(intrados)) continue;
 
-                                                if (StringIsNotValid(durations2)) continue;
-                                                if (StringIsNotValid(around)) continue;
+                                                if (IsInvalidNumber(durations2)) continue;
+                                                if (IsInvalidNumber(dinosaur)) continue;
+                                                if (IsInvalidNumber(around)) continue;
+                                                if (IsInvalidNumber(auditors)) continue;
+                                                if (IsInvalidNumber(sautoir)) continue;
+                                                if (IsInvalidNumber(sudation)) continue;
+                                                if (IsInvalidNumber(rainouts)) continue;
+                                                if (IsInvalidNumber(nutrisoda)) continue;
+                                                if (IsInvalidNumber(rodaustin)) continue;
+                                                if (IsInvalidNumber(astound)) continue;
 
-                                                Console.WriteLine($"{DD} {UU} {RR} {AA} {TT} {II} {OO} {NN} {SS}");
+                                                Console.WriteLine("\n d u r a t i o n s");
+                                                Console.WriteLine($" {DD} {UU} {RR} {AA} {TT} {II} {OO} {NN} {SS}");
+
                                                 Console.WriteLine("\nAcross\n");
-                                                Console.WriteLine($" b - {OutString(products, durations1)}");
-                                                Console.WriteLine($" i - {OutString(products, rotunda)}");
-                                                Console.WriteLine($" k - {OutString(products, sitaround)}");
-                                                Console.WriteLine($" n - {OutString(products, unitards)}");
-                                                Console.WriteLine($" o - {OutString(products, astroid)}");
-                                                Console.WriteLine($" s - {OutString(products, dinostar)}");
+                                                Console.WriteLine($" b - {products.GetString(durations1)}");
+                                                Console.WriteLine($" i - {products.GetString(rotunda)}");
+                                                Console.WriteLine($" k - {products.GetString(sitaround)}");
+                                                Console.WriteLine($" n - {products.GetString(unitards)}");
+                                                Console.WriteLine($" o - {products.GetString(astroid)}");
+                                                Console.WriteLine($" p - {products.GetString(sutorian)}");
+                                                Console.WriteLine($" s - {products.GetString(dinostar)}");
+                                                Console.WriteLine($" v - {products.GetString(tinodusRearr)}");
+                                                Console.WriteLine($" w - {products.GetString(tundras)}");
+                                                Console.WriteLine($" y - {products.GetString(intrados)}");
                                                 Console.WriteLine("\nDown\n");
-                                                Console.WriteLine($" c - {OutString(products, durations2)}");
-                                                Console.WriteLine($" e - {OutString(products, around)}");
+                                                Console.WriteLine($" c - {products.GetString(durations2)}");
+                                                Console.WriteLine($" d - {products.GetString(dinosaur)}");
+                                                Console.WriteLine($" e - {products.GetString(around)}");
+                                                Console.WriteLine($" f - {products.GetString(auditors)}");
+                                                Console.WriteLine($" j - {products.GetString(sautoir)}");
+                                                Console.WriteLine($" m - {products.GetString(sudation)}");
+                                                Console.WriteLine($" q - {products.GetString(rainouts)}");
+                                                Console.WriteLine($" r - {products.GetString(nutrisoda)}");
+                                                Console.WriteLine($" t - {products.GetString(rodaustin)}");
+                                                Console.WriteLine($" u - {products.GetString(astound)}");
+
+                                                foreach (var r in products.Prods.Where(x => $"{x.BCEF}{x.G}".OrderBy(z => z).ToString() == "13456789"))
+                                                {
+                                                    Console.WriteLine($"{r.BCEF} {r.G}");
+                                                }
                                             }
                                         }
                                     }
@@ -124,12 +128,61 @@ namespace L4764
             }
         }
 
-        private static string OutString(List<(int, int, int)> products, long val)
+        private static Products GetProducts()
         {
-            return $"{val} BCEF={products.Where(x => x.Item2 == val).FirstOrDefault().Item1,4} G={products.Where(x => x.Item1 == val).FirstOrDefault().Item2,4}";
+            var products = new Products();
+            var unique = new Products();
+
+            for (int B = 1; B < 10; B++)
+            {
+                for (int C = 1; C < 10; C++)
+                {
+                    if (B != C)
+                    {
+                        for (int E = 1; E < 10; E++)
+                        {
+                            if (B != E && C != E)
+                            {
+                                for (int F = 1; F < 10; F++)
+                                {
+                                    if (B != F && C != F && E != F)
+                                    {
+                                        int G = B * E + 66 * C * F;
+                                        int H = (C * E + B * F);
+
+                                        if (IsInvalidNumber((long)G)) continue;
+
+                                        int BCEF = B * 1000 + C * 100 + E * 10 + F;
+                                        products.Add(BCEF, G);
+
+                                        {
+                                            var all = $"{BCEF}{G}".OrderBy(z => z).ToArray();
+                                            bool valid = true;
+                                            for (int i = 1; i < all.Length; i++)
+                                            {
+                                                if (all[i - 1] == all[i])
+                                                {
+                                                    valid = false;
+                                                    break;
+                                                }
+                                            }
+                                            if (valid)
+                                            {
+                                                unique.Add(BCEF, G);
+                                                Console.WriteLine($"{BCEF}, {G}");
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return products;
         }
 
-        private static bool StringIsNotValid(long lng)
+        private static bool IsInvalidNumber(long lng)
         {
             string str = lng.ToString();
 
